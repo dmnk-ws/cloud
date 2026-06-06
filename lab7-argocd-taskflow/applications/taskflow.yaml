@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: taskflow
+  name: taskflow-staging
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -18,12 +18,12 @@ spec:
         - name: "frontend.service.type"
           value: LoadBalancer
         - name: "frontend.replicaCount"
-          value: "3"
+          value: "1"
         - name: "backend.replicaCount"
-          value: "2"
+          value: "1"
   destination:
     name: in-cluster
-    namespace: taskflow
+    namespace: taskflow-staging
   syncPolicy:
     automated:
       prune: true

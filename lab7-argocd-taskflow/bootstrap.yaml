@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: bootstrap
+  name: bootstrap-staging
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/dmnk-ws/cloud/
-    targetRevision: main
+    targetRevision: dev
     path: lab7-argocd-taskflow/applications
   destination:
     name: in-cluster
