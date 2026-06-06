@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: https://github.com/dmnk-ws/cloud/
-    targetRevision: HEAD
+    targetRevision: main
     path: lab7-argocd-taskflow/applications
   destination:
     name: in-cluster
